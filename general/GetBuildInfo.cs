@@ -1,4 +1,4 @@
-﻿Func<string, object> parseCdnInfo = (rawCdnResponse) => {
+﻿Func<string, Task<object>> parseCdnInfo = async (rawCdnResponse) => {
     string[] cdnVars = rawCdnResponse.Split(' ');
 
     if (cdnVars.Length == 5) {
