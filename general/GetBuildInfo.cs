@@ -1,4 +1,4 @@
-﻿Func<string, Task<object>> parseCdnInfo = async (rawCdnResponse) => {
+﻿Func<string, object> parseCdnInfo = (rawCdnResponse) => {
     string[] cdnVars = rawCdnResponse.Split(' ');
 
     if (cdnVars.Length == 5) {
@@ -21,7 +21,7 @@
         }
     }
 
-    await SetResponse("FAILED", 500);
+    SetResponse("FAILED", 500);
     return null;
 };
 
