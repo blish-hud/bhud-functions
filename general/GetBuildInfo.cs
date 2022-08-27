@@ -19,12 +19,15 @@
                 manifestFileSize = oManifestFileSize
             };
         }
-    } else {
-        await SetResponse("FAILED", 500);
     }
+
+    await SetResponse("FAILED", 500);
+    return null;
 };
 
 var standardCdn = parseCdnInfo(await "http://assetcdn.101.arenanetworks.com/latest/101".GetStringAsync());
 var chineseCdn  = parseCdnInfo(await "http://assetcdn.111.cgw2.com/latest/111".GetStringAsync());
+
+if (standardCdn == null || chineseCdn == null) return;
 
 await SetJsonResponse(new { standard = standardCdn, chinese = chineseCdn }, cacheDuration: TimeSpan.FromMinutes(10));
