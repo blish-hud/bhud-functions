@@ -19,6 +19,7 @@ foreach (int id in response.categories) {
 
 if (festivals.Count == festivalLookup.Count) {
     festivals = new List<string>() {
+        "lunarnewyear"
     };
 }
         
