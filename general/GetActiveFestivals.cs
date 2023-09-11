@@ -7,11 +7,8 @@
     { 233, "dragonbash" }
 };
 
-var festivals = new List<string>();
-
-if (festivals.Count == festivalLookup.Count) {
-    festivals = new List<string>() {
-    };
-}
+var festivals = new List<string>() {
+    
+};
         
 await SetJsonResponse(festivals, cacheDuration: TimeSpan.FromMinutes(5));
