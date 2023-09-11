@@ -8,6 +8,11 @@ if (IsAuth(true)) {
   await gitPull.WaitForExitAsync();
   await ResetScriptCache();
   await SetResponse("OK", 200);
+
+  var restart = new System.Diagnostics.Process();
+  restart.StartInfo.FileName  = "service";
+  restart.StartInfo.Arguments = "sharpfunc restart";
+  restart.Start();
 } else {
   await SetResponse("NOT OK", 403);
 }
