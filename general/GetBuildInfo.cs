@@ -30,4 +30,4 @@ var chineseCdn  = parseCdnInfo(await "http://assetcdn.111.cgw2.com/latest/111".G
 
 if (standardCdn == null || chineseCdn == null) return;
 
-await SetJsonResponse(new { standard = standardCdn, chinese = chineseCdn }, cacheDuration: TimeSpan.FromMinutes(1));
+await SetJsonResponse(new { standard = standardCdn, chinese = chineseCdn }, cacheDuration: TimeSpan.FromMinutes(5));
