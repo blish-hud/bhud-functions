@@ -8,7 +8,7 @@
 };
 
 var festivals = new List<string>() {
-    
+    "halloween"
 };
         
 await SetJsonResponse(festivals, cacheDuration: TimeSpan.FromMinutes(5));
