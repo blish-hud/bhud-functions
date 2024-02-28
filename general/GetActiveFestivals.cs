@@ -8,7 +8,6 @@
 };
 
 var festivals = new List<string>() {
-    "lunarnewyear"
 };
         
 await SetJsonResponse(festivals, cacheDuration: TimeSpan.FromMinutes(5));
