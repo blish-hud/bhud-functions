@@ -8,7 +8,6 @@
 };
 
 var festivals = new List<string>() {
-    "superadventurefestival"
 };
         
 await SetJsonResponse(festivals, cacheDuration: TimeSpan.FromMinutes(5));
