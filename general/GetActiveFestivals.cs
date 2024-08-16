@@ -1,4 +1,5 @@
-﻿var festivalLookup = new Dictionary<int, string>() {
+// Left for reference.
+var festivalLookup = new Dictionary<int, string>() {
     { 79, "halloween" }, 
     { 98, "wintersday" },
     { 162, "superadventurefestival" }, 
@@ -7,8 +8,6 @@
     { 233, "dragonbash" }
 };
 
-var festivals = new List<string>() {
-    "dragonbash"
-};
+var festivals = await "https://cap.blishhud.com/festivals.json".GetJsonAsync<List<string>>();
         
 await SetJsonResponse(festivals, cacheDuration: TimeSpan.FromMinutes(5));
